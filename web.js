@@ -2,9 +2,9 @@ var express = require('express');
 // var fs = require('fs');
 
 var app = express.createServer(express.logger());
-/*
-var text = "";
 
+var text = 'Hello Gal 2';
+/*
 fs.readfile('index.html', function (err,data){
 	if (err) throw err;
 	console.log(data);
@@ -12,7 +12,7 @@ fs.readfile('index.html', function (err,data){
 */
 
 app.get('/', function(request, response) {
-  response.send('Hello Gal');
+  response.send(text);
 });
 
 var port = process.env.PORT || 5000;
